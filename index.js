@@ -3,8 +3,12 @@ const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3000;
 app.use(express.json());
-app.use(cors());
-require('dotenv').config();
+require('dotenv').config(); 
+
+app.use(cors({
+  origin: ['http://127.0.0.1:5500','http://127.0.0.1:7700'],
+  credentials: true
+}));
 
 app.get('/',(req,res)=>{
     res.send('Server is Activate Successfully');
