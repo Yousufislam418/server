@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 require('dotenv').config(); 
 
-app.use(cors({origin: 'https://server-eight-kohl.vercel.app'}));
+app.use(cors({origin: ['https://server-eight-kohl.vercel.app','http://127.0.0.1:5500']}));
 
 app.get('/',(req,res)=>{
     res.send('Server is Activate Successfully');
