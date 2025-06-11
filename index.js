@@ -6,7 +6,7 @@ app.use(express.json());
 require('dotenv').config(); 
 
 app.use(cors({
-  origin: ['http://127.0.0.1:5500','http://127.0.0.1:7700'],
+  origin: 'https://server-eight-kohl.vercel.app',
   credentials: true
 }));
 
